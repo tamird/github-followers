@@ -9,7 +9,7 @@ client.auto_paginate = true
 
 %w(
   stargazers
-  watchers
+  subscribers
 ).each do |type|
   File.open(type, 'w') do |file|
     client.public_send(type, repo).map(&:login).each do |login|
